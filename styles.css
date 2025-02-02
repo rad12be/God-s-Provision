@@ -1,0 +1,330 @@
+* {margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: 'Cinzel', serif;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout by default */
+    grid-template-rows: auto 1fr; /* Create header and content area */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    height: 100%;    
+}
+
+.video-grid {
+    grid-column: 1 / 2; /* Take full width */
+    grid-row: 1 / 2; /* First row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 472px; /* Fixed height for video */
+    background-color: transparent;
+    border-radius: 15px;       
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    overflow: hidden;
+    box-shadow: transparent;
+}
+
+
+video {
+    border-radius: 15px;       
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+
+
+.video-grid iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+}
+
+/* Food List Grid Container */
+.food-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two grids side by side */
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px; /* Limit max width */
+    margin-top: 20px;    
+}
+
+.food-list {
+    list-style-type: none;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    border-style: 0;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.food-list h3 {
+    margin-bottom: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content-grid {
+    grid-column: 1 / 2; /* Full width by default */
+    grid-row: 2 / 4; /* Third row */
+    width: 100%;
+    max-width: 500px; /* Limit max width */
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    width: calc(100% - 40px); /* Full width minus margin */
+    
+}
+
+button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(5, 5, 5);
+  background: #ffffff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button::before {
+    content: "";
+    background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  button:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  footer {
+    position: bottom;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+
+
+  /*button framed*/
+    
+  .btn {
+    width: 250px;
+    height: 50px;
+    border: 1px solid #333;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+  }
+  
+  .btn::before, .btn::after {
+    position: absolute;
+    background: white;
+    z-index: -1;
+    transition: 1s;
+    content: '';
+  }
+  
+  .btn::before {
+    height: 50px;
+    width: 130px;
+  }
+  
+  .btn::after {
+    width: 150px;
+    height: 30px;
+  }
+  
+  .noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  }
+  
+  .btn:hover::before {
+    width: 0px;
+    background: #fff;
+  }
+  
+  .btn:hover::after {
+    height: 0px;
+    background: #fff;
+  }
+  
+  .btn:hover {
+    background: #fff;
+  }
+
+  /*end of button framed*/
+
+#result {
+    margin-top: auto;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 50%;            
+}
+
+#foodImage {
+    display: none;
+    margin-top: auto;
+    width: 50%;
+    height: 50%;
+    object-fit: fill;
+    border-radius: 10px;
+    align-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black; /* Prevents color change after clicking */
+}
+
+a:hover {
+    color: darkgray; /* Optional hover effect */
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* One column layout for smaller screens */
+        grid-template-rows: auto 1fr 1fr;
+        padding: 10px;
+    }
+
+    .video-grid {
+        height: 200px; /* Adjust video height on smaller screens */
+    }
+
+    .food-list-container {
+        grid-template-columns: 1fr; /* Stack the lists on mobile */
+    }
+
+    .food-list, .content-grid {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-grid {
+        height: 150px; /* Make the video even smaller on very small screens */
+    }
+
+    .food-list, .content-grid {
+        padding: 10px; /* Reduce padding on small screens */
+    }
+
+    input, button {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px; /* Adjust padding */
+    }
+}
+
+
+/* End of styles.css */
+
+
+
+
+
+
+
+
+
+

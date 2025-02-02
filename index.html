@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Video Grid (YouTube video embedded) -->
+    <div class="video-grid">        
+            <iframe src="https://www.youtube.com/embed/8GFbPTKiReM?autoplay=1&mute=1" 
+                    title="SupremeMasterTV - The Most Powerful Daily Prayer (1 + 36,288 Max)" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
+        
+    </div> 
+
+    <!--<div class="video-grid">
+        <video autoplay muted loop playsinline>
+            <source src="AD-The-Most-Powerful-Daily-Prayer-max-1080p.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div> -->           
+    <a href="https://suprememastertv.com/pdf/NoPainFood.pdf" class="btn" target="_blank" download=""><span class="ico-download"></span>Download Pdf <font color="#F28500"> (New!)</font></a>
+    
+        
+    
+
+    <!-- Food List Container -->
+    <div class="food-list-container">
+        
+        
+        <!-- Foods You Can Eat -->                        
+        <div class="food-list">
+            <div class="btn">
+            <span class="noselect">
+                <a href="" target="_blank">
+                <h3>No-Pain Food</h3>
+                </a>
+            </span>
+          </div>            
+        </div>
+        
+
+        <!-- Foods You Cannot Eat -->
+        <div class="food-list">
+            <div class="btn">
+            <span class="noselect">
+                <a href="pain.html" target="_blank">
+                <h3>Pain Food</h3>
+                </a>
+            </span>
+          </div>            
+        </div>     
+    </div>
+
+    <!-- Content Form Grid -->
+    <div class="content-grid">
+        <h2>Can I Eat This?</h2>
+        <input type="text" id="foodInput" placeholder="Enter food name">
+        <button onclick="checkFood()">Check</button>
+        <p id="result"></p>
+        <img id="foodImage" src="" alt="Food Image">
+    </div>
+
+    
+    <p class="footer">© 2025 Food Checker</p>
+    
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
